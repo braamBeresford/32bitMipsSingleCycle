@@ -1,7 +1,6 @@
 module dataMemory
     (
-        input logic [31:0] addr,
-        input logic [31:0] WD,
+        input logic [31:0] addr, WD,
         input logic clk, memWrite,
         output logic [31:0] RD
     );
