@@ -1,0 +1,9 @@
+module extendSign
+	(
+		input logic [15:0] x,
+		output logic [31:0] y
+	);
+	
+	assign y = {{16{x[15]}},x};
+	
+endmodule

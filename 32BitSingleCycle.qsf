@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
-set_global_assignment -name TOP_LEVEL_ENTITY registerMem
+set_global_assignment -name TOP_LEVEL_ENTITY dataPath
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:02:17  SEPTEMBER 02, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -51,7 +51,17 @@ set_global_assignment -name SYSTEMVERILOG_FILE topLevel.sv
 set_global_assignment -name SYSTEMVERILOG_FILE instructMem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE dataMemory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE registerMem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flopr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dataPath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE extendSign.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE shift_left_2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE control_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mainDecoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu_decoder.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
