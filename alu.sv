@@ -20,6 +20,6 @@ module alu
 			
 		endcase
 	
-	assign zero = (alu_res == 0)? 1: 0;
+	assign zero = (alu_res == 0)? 1'b1: 1'b0;
 	
 endmodule

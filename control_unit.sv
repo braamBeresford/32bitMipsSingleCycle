@@ -10,8 +10,11 @@ module control_unit
 	logic branch;
 	logic [1:0] alu_op;
 	
-	mainDecoder main(op, funct, alu_zero,alu_op, mem_to_reg, mem_write, pc_src,
-						alu_src, reg_dst, reg_write, jump);
+	mainDecoder mainDecode(op, mem_to_reg, mem_write,branch,
+								alu_src, reg_dst, reg_write, jump, alu_op);
 	
+	alu_decoder alu_dec(funct, alu_op, alu_control);
+	
+	assign pc_src = branch & alu_zero;
 	
 endmodule

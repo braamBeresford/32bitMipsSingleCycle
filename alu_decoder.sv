@@ -15,6 +15,7 @@ module alu_decoder
 				6'b100100: alu_control <= 3'b000;
 				6'b100101: alu_control <= 3'b001;
 				6'b101010: alu_control <= 3'b111;
+				default: alu_control <= 3'bxxx; //Basically throw an error
 			endcase
 	endcase
 	

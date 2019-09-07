@@ -1,25 +1,14 @@
 module dataMemory
     (
-        input logic [31:0] addr, WD,
-        input logic clk, memWrite,
-        output logic [31:0] RD
-    );
-
-    logic [31:0] ram [255:0];
-
-	integer i; 
-    initial begin  
-        for(i=0;i<256;i=i+1)  
-            ram[i] <= 32'd0;  
-    end
-
-    always_ff @(posedge clk)
-    begin
-        if(memWrite) 
-            ram[addr] <= WD;
-
-    end
-
-    assign RD = ram[addr];
-
+		input logic clk, we, 
+		input logic [31:0] a, wd,
+		output logic [31:0] rd); 
+		
+		
+		logic [31:0] RAM[63:0];
+		
+		
+		assign rd = RAM[a[31:2]]; // word aligned
+		always_ff @(posedge clk)
+			if (we) RAM[a[31:2]] <= wd;
 endmodule

@@ -1,11 +1,13 @@
 module mainDecoder
 	(
-		input logic [5:0] op_code, funct,
-		input logic alu_zero,
+		input logic [5:0] op_code,
+		output logic 		mem_to_reg, mem_write, branch,
+		output logic		alu_src, reg_dst, reg_write,
+		output logic 		jump, 
+
 		
-		output logic [1:0] alu_op,
-		output logic mem_to_reg, mem_write, pc_src, branch,
-		output logic alu_src, reg_dst, reg_write, jump
+		output logic [1:0] alu_op
+
 	);
 	
 	logic [8:0] controls;
