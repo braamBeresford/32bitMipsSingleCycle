@@ -1,4 +1,4 @@
-module mux2 #(WIDTH = 16)
+module mux2 #(WIDTH = 8)
 	(
 		input logic [WIDTH-1:0] in0, in1,
 		input logic select,

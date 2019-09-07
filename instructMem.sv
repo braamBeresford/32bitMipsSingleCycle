@@ -1,6 +1,6 @@
 module instructMem
     (
-        input logic [31:0] pc,
+        input logic [5:0] pc,
         output logic [31:0] instruction
         
     );

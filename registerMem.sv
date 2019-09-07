@@ -10,9 +10,7 @@ module registerMem
 	logic [31:0] regData [31:0];
 	
 	always_ff @(posedge clk)
-	begin
 		if(WE3) regData[WA3] <= WD3;
-	end
 	
 	//Register 0 is always 0.
 	assign RD1 = (RA1 != 0) ? regData[RA1]: 0;

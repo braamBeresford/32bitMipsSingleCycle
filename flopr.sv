@@ -1,4 +1,4 @@
-module flopr #(parameter WIDTH = 16)
+module flopr #(parameter WIDTH = 8)
 	(
 		input logic clk, reset,
 		input logic [WIDTH-1:0] pc_next,

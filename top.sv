@@ -12,7 +12,7 @@ module top
 
 
 								
-	instructMem		instructions(pc, instr);
+	instructMem		instructions(pc[7:2], instr);
 	
 	dataMemory					data(clk, mem_write, data_addr, write_data, read_data);
 endmodule

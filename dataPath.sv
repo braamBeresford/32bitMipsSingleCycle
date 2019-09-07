@@ -20,7 +20,7 @@ module dataPath
 	
 	
 	flopr #(32) 	pc_flop(clk, reset, pc_next, pc);   
-	adder				add_four_pc(pc, 3'b100, pc_plus_4);
+	adder				add_four_pc(pc, 4, pc_plus_4);
 	shift_left_2 	sl2(sign_immediate, sign_immediate_shifted_2);
 	adder				jmp_adder(sign_immediate_shifted_2, pc_plus_4, pc_branch);
 	mux2 #(32)		pc_src_mux(pc_plus_4, pc_branch, pc_src, pc_temp);
@@ -35,7 +35,7 @@ module dataPath
 
 
 	mux2 #(32)		alu_src_mux(write_data, sign_immediate, alu_src, src_B);
-	alu				alu(src_A, src_B, alu_control, alu_zero, alu_res);
+	alu				alu(src_A, src_B, alu_control, alu_res, alu_zero);
 
 endmodule
 
