@@ -5,9 +5,16 @@ This is my single cycle implementation of a basic MIPS cpu. The supported op cod
 A single cycle CPU is essentially purely combinational from the datapath and control unit perspective. It only takes one clock cycle for an instruction to execute. To put it another way, one instruction cycle equals one clock cycle.
 
 #### Advantages and Disadvantages
-Single cycle CPUs are relatively simple to implement as they are just combinational logic and registers. This means they are low cost and require little space. 
 
-Being able to able to complete an instruction in one cycle is a double edged sword. The hardware takes time to process the information given. This means that the clock can only pulse so quickly before it creates a setup or hold time violation. As a result singly cycle clock's tend to be quite slow and are not used in modern CPUs.
+Advantages: 
+* Single cycle CPUs are relatively simple to implement as they are just combinational logic and registers.
+* This means they are low cost and require little space. 
+
+Disadvantages:
+* Being able to able to complete an instruction in one cycle is a double edged sword.
+* The clock has a limited frequency by setup and hold timing requirements of the large amount of combinational logic
+* Clock tends to be quite slow making this design less desirable in modern CPUs
+
 
 
 ### Supported Operations
